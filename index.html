@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mali Pub : actualités, annonces et publicités au Mali.">
+<title>Mali Pub — Informer, promouvoir, développer</title>
+<style>
+:root{--navy:#10233d;--yellow:#f5c542;--green:#16866d;--red:#d94d52;--blue:#315db5;--paper:#f5f7fb;--ink:#172337;--muted:#667085}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #0a18301c}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:white;text-decoration:none;font-weight:900;font-size:1.35rem;letter-spacing:.5px}
+.logo{background:var(--yellow);color:var(--navy);width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem}
+nav{display:flex;gap:16px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:650;font-size:.94rem}nav a:hover{color:var(--yellow)}
+.hero{background:linear-gradient(120deg,#10233d 0%,#193d63 62%,#16866d 100%);color:white;padding:66px 20px 58px}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.35fr .85fr;gap:34px;align-items:center}
+.eyebrow{color:var(--yellow);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem}
+h1{font-size:clamp(2.3rem,6vw,4.3rem);line-height:1.05;margin:12px 0 18px;letter-spacing:-1.7px}
+.hero p{max-width:620px;color:#e2eaf4;font-size:1.08rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:12px 17px;font-weight:800;text-decoration:none;cursor:pointer;font-size:.95rem}
+.btn-yellow{background:var(--yellow);color:var(--navy)}.btn-outline{border:1px solid #ffffff8a;color:white;background:transparent}
+.hero-card{background:white;color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 18px 45px #06132644;transform:rotate(1deg)}
+.hero-card .tag{background:#fff2c3;color:#795a00;padding:5px 9px;border-radius:99px;font-size:.75rem;font-weight:800}
+.hero-card h3{font-size:1.4rem;margin:15px 0 6px}.hero-card p{color:var(--muted);font-size:.95rem}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{background:#f0f4fa;border-radius:10px;padding:12px;text-align:center}.stat strong{display:block;color:var(--green);font-size:1.3rem}.stat span{font-size:.75rem;color:var(--muted)}
+main{max-width:1100px;margin:auto;padding:42px 20px 70px}.section{margin:0 0 48px;scroll-margin-top:90px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+h2{margin:0;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.5px}.section-head p{margin:5px 0 0;color:var(--muted)}
+.pill{display:inline-block;border-radius:99px;padding:5px 10px;background:#e6edf7;color:#29466b;font-size:.76rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.card{background:white;border:1px solid #e7ebf2;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px #152a4610}
+.card-top{min-height:130px;padding:20px;display:flex;align-items:end;color:white;font-size:2rem;font-weight:900}
+.c1{background:linear-gradient(135deg,#16866d,#80c9a8)}.c2{background:linear-gradient(135deg,#315db5,#7da7f0)}.c3{background:linear-gradient(135deg,#d94d52,#ffad78)}.c4{background:linear-gradient(135deg,#7548a8,#c49be9)}.c5{background:linear-gradient(135deg,#b17a16,#f5c542)}.c6{background:linear-gradient(135deg,#263b56,#637f9f)}
+.card-body{padding:18px}.card h3{margin:8px 0 7px;font-size:1.1rem}.card p{margin:0 0 12px;color:var(--muted);font-size:.94rem}
+.meta{font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.notice{background:#fff7dc;border:1px solid #f4df93;border-radius:12px;padding:13px 15px;color:#5d4a12;font-size:.9rem;margin-top:16px}
+.promo{background:linear-gradient(110deg,#f5c542,#ffe69a);border-radius:18px;padding:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.promo h2{font-size:1.65rem}.promo p{margin:8px 0 0;max-width:650px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:white;border:1px solid #e7ebf2;border-radius:16px;padding:22px}
+.panel h3{margin-top:0}.panel p{color:var(--muted)}
+form{display:grid;gap:12px}label{font-size:.88rem;font-weight:750}input,select,textarea{width:100%;margin-top:5px;border:1px solid #cfd6e2;border-radius:9px;padding:12px;font:inherit;background:white;color:var(--ink)}textarea{min-height:100px;resize:vertical}
+footer{background:#0b182b;color:#dbe4f0;padding:30px 20px}.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-inner p{margin:5px 0;color:#aebbd0;font-size:.88rem}
+.small{font-size:.8rem;color:var(--muted)}.hidden{display:none}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr}.hero{padding-top:46px}.hero-card{transform:none}.grid{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}nav{gap:10px}.nav{align-items:flex-start}.brand{font-size:1.15rem}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero-card{padding:19px}.nav{display:block}.brand{margin-bottom:12px}nav{font-size:.85rem}.mini-stats{gap:6px}.stat{padding:9px 4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="#accueil"><span class="logo">📣</span><span>MALI PUB</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a><a href="#actualites">Actualités</a><a href="#publicites">Publicités</a><a href="#apropos">À propos</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="accueil">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">L’info • La pub • L’actualité</div>
+      <h1>Faites connaître<br>vos idées au Mali.</h1>
+      <p>Bienvenue sur Mali Pub, votre espace pour découvrir les actualités, les initiatives locales, les entreprises, les produits et les événements qui font bouger le Mali.</p>
+      <div class="actions"><a class="btn btn-yellow" href="#publicites">Découvrir les annonces</a><a class="btn btn-outline" href="#contact">Proposer une publicité</a></div>
+    </div>
+    <div class="hero-card">
+      <span class="tag">VOTRE VISIBILITÉ COMMENCE ICI</span>
+      <h3>Vous avez une activité à promouvoir ?</h3>
+      <p>Présentez votre boutique, votre service, votre événement ou votre marque à notre communauté.</p>
+      <div class="mini-stats"><div class="stat"><strong>01</strong><span>Informer</span></div><div class="stat"><strong>02</strong><span>Promouvoir</span></div><div class="stat"><strong>03</strong><span>Connecter</span></div></div>
+    </div>
+  </div>
+</section>
+<main>
+  <section class="section" id="actualites">
+    <div class="section-head"><div><span class="pill">À LA UNE</span><h2>Actualités & découvertes</h2><p>Des sujets à suivre et des initiatives à découvrir.</p></div></div>
+    <div class="grid">
+      <article class="card"><div class="card-top c1">📰</div><div class="card-body"><span class="pill">Actualités</span><h3>Les initiatives locales à l’honneur</h3><p>Découvrez les projets, les idées et les actions qui contribuent à la vie de nos communautés.</p><div class="meta"><span>Rédaction Mali Pub</span><span>Article de démonstration</span></div></div></article>
+      <article class="card"><div class="card-top c2">🎤</div><div class="card-body"><span class="pill">Culture</span><h3>La scène culturelle malienne</h3><p>Musique, artistes, spectacles et rendez-vous culturels : suivez les actualités du secteur.</p><div class="meta"><span>Culture & musique</span><span>Article de démonstration</span></div></div></article>
+      <article class="card"><div class="card-top c4">💡</div><div class="card-body"><span class="pill">Entrepreneuriat</span><h3>Mettre en valeur les entrepreneurs</h3><p>Un espace pour présenter les initiatives, les savoir-faire et les petites entreprises.</p><div class="meta"><span>Vie économique</span><span>Article de démonstration</span></div></div></article>
+    </div>
+    <div class="notice"><strong>À retenir :</strong> ces contenus sont des exemples pour la maquette. Remplacez-les par des informations réelles, vérifiées et datées avant la présentation publique.</div>
+  </section>
+
+  <section class="section" id="publicites">
+    <div class="section-head"><div><span class="pill">ESPACE ANNONCEURS</span><h2>Publicités & annonces</h2><p>Des exemples de fiches que votre groupe pourra proposer aux annonceurs.</p></div></div>
+    <div class="grid">
+      <article class="card"><div class="card-top c3">🏪</div><div class="card-body"><span class="pill">Commerce</span><h3>Votre boutique ici</h3><p>Présentez vos produits, vos horaires et la manière de vous contacter.</p><div class="meta"><span>Emplacement démo</span><span>À personnaliser</span></div></div></article>
+      <article class="card"><div class="card-top c5">🎉</div><div class="card-body"><span class="pill">Événement</span><h3>Annoncez votre événement</h3><p>Promouvez un concert, une conférence, une formation ou une activité locale.</p><div class="meta"><span>Emplacement démo</span><span>À personnaliser</span></div></div></article>
+      <article class="card"><div class="card-top c6">🤝</div><div class="card-body"><span class="pill">Services</span><h3>Faites connaître vos services</h3><p>Présentez votre entreprise, votre savoir-faire et vos coordonnées professionnelles.</p><div class="meta"><span>Emplacement démo</span><span>À personnaliser</span></div></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="promo"><div><h2>Votre activité mérite d’être connue !</h2><p>Vous êtes commerçant, artiste, entrepreneur ou organisateur ? Contactez l’équipe Mali Pub pour discuter d’une publication publicitaire.</p></div><a class="btn" style="background:#10233d;color:white" href="#contact">Nous contacter</a></div>
+  </section>
+
+  <section class="section" id="apropos">
+    <div class="section-head"><div><span class="pill">NOTRE PROJET</span><h2>À propos de Mali Pub</h2><p>Informer, promouvoir et rapprocher les personnes des entreprises.</p></div></div>
+    <div class="two-col">
+      <div class="panel"><h3>Notre mission</h3><p>Mali Pub est un projet de site publicitaire conçu pour mettre en valeur les commerces, les services, les artistes et les événements, tout en proposant un espace de publication d’actualités.</p></div>
+      <div class="panel"><h3>Notre vision</h3><p>Créer une plateforme simple, accessible sur téléphone et utile aux annonceurs comme aux visiteurs. Le site est une maquette scolaire qui peut évoluer selon les besoins du groupe.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-head"><div><span class="pill">PARLONS DE VOTRE PROJET</span><h2>Contactez Mali Pub</h2><p>Décrivez votre demande de publicité ou de partenariat.</p></div></div>
+    <div class="two-col">
+      <div class="panel"><h3>Demande de publicité</h3><p>Remplissez le formulaire. Cette démonstration prépare un message sur votre appareil ; elle n’envoie pas automatiquement vos données sur Internet.</p>
+        <form id="contactForm">
+          <div><label for="name">Nom ou entreprise</label><input id="name" name="name" required placeholder="Ex. Boutique Awa"></div>
+          <div><label for="email">Adresse e-mail ou téléphone</label><input id="email" name="email" required placeholder="Votre moyen de contact"></div>
+          <div><label for="kind">Type de demande</label><select id="kind" name="kind"><option>Publicité commerciale</option><option>Annonce d’événement</option><option>Partenariat</option><option>Proposition d’article</option><option>Autre demande</option></select></div>
+          <div><label for="message">Votre message</label><textarea id="message" name="message" required placeholder="Présentez votre activité ou votre demande..."></textarea></div>
+          <button class="btn btn-yellow" type="submit">Préparer mon message</button>
+          <p id="formStatus" class="small" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="panel"><h3>Coordonnées de l’équipe</h3><p>Ajoutez ici les coordonnées officielles de votre groupe une fois que vous les aurez choisies.</p><p><strong>WhatsApp :</strong> à compléter</p><p><strong>E-mail :</strong> à compléter</p><p><strong>Zone :</strong> Mali</p><div class="notice">Ne publiez pas de numéro personnel sans l’accord de la personne concernée. Pour recevoir réellement les demandes, il faudra relier le formulaire à un service adapté ou afficher un contact valide.</div></div>
+    </div>
+  </section>
+</main>
+<footer><div class="footer-inner"><div><a class="brand" href="#accueil"><span class="logo">📣</span><span>MALI PUB</span></a><p>Informer • Promouvoir • Développer</p></div><div><strong>Projet scolaire — maquette</strong><p>© <span id="year"></span> Mali Pub. Tous droits réservés.</p><p>Les annonces et actualités de démonstration sont à remplacer avant mise en ligne.</p></div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const f=new FormData(this);
+ const subject=encodeURIComponent('Demande via Mali Pub — '+f.get('kind'));
+ const body=encodeURIComponent('Nom / entreprise : '+f.get('name')+'\nContact : '+f.get('email')+'\nType : '+f.get('kind')+'\n\nMessage :\n'+f.get('message'));
+ document.getElementById('formStatus').textContent='Le formulaire est prêt. Pour l’envoyer, configurez une adresse e-mail dans le site ou copiez les informations ci-dessus. Aucun message n’a été envoyé automatiquement.';
+ const mailto='mailto:?subject='+subject+'&body='+body;
+ const a=document.createElement('a');a.href=mailto;a.click();
+});
+</script>
+</body>
+</html>
